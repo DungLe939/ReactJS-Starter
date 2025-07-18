@@ -12,21 +12,13 @@ import styles from './styles/Counter.module.css';
 
 export default function App() {
 
-  // console.log("Hello");
-
-  const func = () => {
-    console.log("hi");
+  const MyComponent = () => {
+    return (
+      <h1>Hello World, Day la dung</h1>
+    );
   }
 
-  func();
-
-  const count = useSelector(selectCount);
-  const dispatch = useDispatch();
-  const [incrementAmount, setIncrementAmount] = useState('2');
-
-  const incrementValue = Number(incrementAmount) || 0;
-
   return (
-    <h1>Hello world</h1>
+    <MyComponent />
   );
 } 
