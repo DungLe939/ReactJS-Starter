@@ -9,16 +9,14 @@ import {
   selectCount,
 } from "./redux/counter/counterSlice";
 import styles from './styles/Counter.module.css';
+import MyComponent from './components/learn/MyComponent';
+
+
 
 export default function App() {
-
-  const MyComponent = () => {
-    return (
-      <h1>Hello World, Day la dung</h1>
-    );
-  }
-
   return (
-    <MyComponent />
+    <>
+      <MyComponent/>
+    </>
   );
 } 
