@@ -11,6 +11,15 @@ import {
 import styles from './styles/Counter.module.css';
 
 export default function App() {
+
+  // console.log("Hello");
+
+  const func = () => {
+    console.log("hi");
+  }
+
+  func();
+
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
