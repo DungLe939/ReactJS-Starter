@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  decrement,
-  increment,
-  incrementByAmount,
-  incrementAsync,
-  incrementIfOdd,
-  selectCount,
-} from "./redux/counter/counterSlice";
-import styles from './styles/Counter.module.css';
-import MyComponent from './components/learn/MyComponent';
+import "./components/todo/todo.css";
+import TodoNew from "./components/todo/TodoNew";
+import TodoData from "./components/todo/TodoData";
+import Img from './assets/react.svg'
 
-
-
-export default function App() {
+const App = () => {
   return (
     <>
-      <MyComponent/>
+      <div className="todo-container">
+        <div className="todo-title"><h1>Todo list</h1></div>
+        <TodoNew />
+        <TodoData />
+        <div className="todo-Logo">
+          <img src={Img} />
+        </div>
+      </div>
     </>
   );
-} 
+}
+
+
+export default App;

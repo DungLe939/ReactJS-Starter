@@ -1,11 +1,15 @@
 import './style.css'
 
 const MyComponent = () => {
+    // const text = 25;
+    const obj = {
+        name: "Hoidanit",
+        age: 18
+    };
     return (
-        <h1 className='Heading-Title' style={
-            {borderRadius: "10px"}
-        }
-        >Hello World, Day la dung</h1>
+        <>
+            <p>gggg</p>
+        </>
     );
 }
 
