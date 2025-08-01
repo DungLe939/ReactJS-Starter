@@ -4,10 +4,7 @@ import TodoData from "./components/todo/TodoData";
 import Img from './assets/react.svg'
 import { useState } from "react";
 const App = () => {
-  const [todoList, setTodoList] = useState([
-    {id: 1, name: "Learning React"},
-    {id: 2, name: "Hoi dan it"}
-  ]);
+  const [todoList, setTodoList] = useState([]);
   const randomIntFromInterval = (min, max) => { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
@@ -26,12 +23,16 @@ const App = () => {
         <TodoNew
           addNewTodo={addNewTodo}
         />
-        <TodoData
-          todoList = {todoList}
-        />
-      </div>
-      <div className="todo-Logo">
-        <img src={Img} />
+        {todoList.length > 0 ?
+          <TodoData
+            todoList={todoList}
+            setTodoList={setTodoList}
+          />
+          :
+          <div className="todo-Logo">
+            <img src={Img} />
+          </div>
+        }
       </div>
     </>
   );
